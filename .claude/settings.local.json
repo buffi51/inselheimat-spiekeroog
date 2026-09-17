@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -Z 2400 -s formatOptions 78 __TRACKED_VAR__/1.jpg --out images/hero/hero.jpg)",
+      "Bash(sips -Z 1400 -s formatOptions 78 __TRACKED_VAR__/1.jpg --out images/wohnung/kueche.jpg)",
+      "Bash(sips -Z 1400 -s formatOptions 78 __TRACKED_VAR__/P3140157.jpg --out images/wohnung/wohnzimmer.jpg)",
+      "Bash(sips -Z 1400 -s formatOptions 78 __TRACKED_VAR__/3.jpg --out images/wohnung/sitzecke.jpg)",
+      "Bash(sips -Z 1400 -s formatOptions 78 __TRACKED_VAR__/2.jpg --out images/wohnung/schlafzimmer.jpg)"
+    ]
+  }
+}

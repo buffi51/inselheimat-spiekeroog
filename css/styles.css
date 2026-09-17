@@ -1,0 +1,675 @@
+/* =========================================================
+   Inselheimat Spiekeroog — Stylesheet
+   Stil: hell, ruhig, maritim-modern, gut lesbar
+   ========================================================= */
+
+/* ---------- 1. CSS-Variablen (Design Tokens) ---------- */
+:root {
+  /* Farben — maritim, hell, ruhig */
+  --color-bg: #FBFAF6;              /* warmes Off-White (Dünensand) */
+  --color-surface: #FFFFFF;         /* Kartenflächen */
+  --color-surface-alt: #F2F0E8;     /* leicht abgesetzte Fläche */
+
+  --color-primary: #1F5266;         /* Petrol / tiefes Meerblau */
+  --color-primary-dark: #163C4B;    /* dunklere Variante (Hover, Header) */
+  --color-primary-light: #4A7C90;   /* hellere Variante */
+
+  --color-accent: #C99A5B;          /* warmer Sand-/Dünengras-Ton */
+  --color-accent-dark: #A97D42;
+
+  --color-seafoam: #A9C6C4;         /* zartes Türkis für Akzentflächen */
+
+  --color-text: #223138;            /* dunkles Blaugrau, hoher Kontrast */
+  --color-text-muted: #5B6B72;      /* gedämpfter Fließtext */
+  --color-text-on-dark: #F5F7F5;
+
+  --color-border: #E0DFD5;
+
+  --color-success: #3D7A5C;
+  --color-error: #B24545;
+
+  /* Typografie */
+  --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --fs-base: 1.125rem;      /* 18px — bewusst groß für gute Lesbarkeit */
+  --fs-sm: 0.9rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.35rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.35rem;
+  --fs-3xl: 3rem;
+
+  --lh-base: 1.65;
+  --lh-heading: 1.2;
+
+  /* Abstände (8px-Raster) */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 6rem;
+
+  /* Layout */
+  --container-max: 1140px;
+  --container-padding: var(--space-3);
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 2px 8px rgba(22, 60, 75, 0.06);
+  --shadow-md: 0 8px 24px rgba(22, 60, 75, 0.1);
+  --shadow-lg: 0 16px 48px rgba(22, 60, 75, 0.16);
+
+  --transition-base: 0.2s ease;
+}
+
+/* ---------- 2. Reset / Basis ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-primary-dark);
+}
+
+ul,
+ol {
+  padding-left: 1.25em;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Sichtbarer Fokus-Ring für Tastaturnutzung / Barrierefreiheit */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- 3. Typografie ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: var(--lh-heading);
+  color: var(--color-primary-dark);
+  margin: 0 0 var(--space-2);
+  font-weight: 600;
+}
+
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); }
+
+p {
+  margin: 0 0 var(--space-2);
+}
+
+.lead {
+  font-size: var(--fs-lg);
+  color: var(--color-text-muted);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: var(--space-1);
+}
+
+/* ---------- 4. Layout-Hilfen ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.section {
+  padding-block: var(--space-6);
+}
+
+.section--alt {
+  background-color: var(--color-surface-alt);
+}
+
+.section-header {
+  max-width: 640px;
+  margin-bottom: var(--space-4);
+}
+
+.section-header.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 800px) {
+  .grid--2,
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- 5. Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.9em 1.75em;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: var(--fs-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--color-accent-dark);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--color-surface);
+  color: var(--color-surface);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: var(--color-surface);
+  color: var(--color-primary-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* ---------- 6. Header / Navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(251, 250, 246, 0.92);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-2);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.brand__mark {
+  display: block;
+  width: 3.6em;
+  height: 3.6em;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.main-nav__list {
+  display: flex;
+  list-style: none;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__list a {
+  color: var(--color-text);
+  font-weight: 500;
+  padding: 0.4em 0.1em;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav__list a:hover,
+.main-nav__list a[aria-current="page"] {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.nav-toggle__bar,
+.nav-toggle__bar::before,
+.nav-toggle__bar::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--color-primary-dark);
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.nav-toggle__bar::before { transform: translateY(-8px); }
+.nav-toggle__bar::after { transform: translateY(6px); }
+
+@media (max-width: 860px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-2) var(--container-padding) var(--space-3);
+    display: none;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .main-nav__list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-nav__list a {
+    display: block;
+    padding: 0.9em 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .main-nav .btn {
+    margin-top: var(--space-2);
+    justify-content: center;
+  }
+}
+
+/* ---------- 7. Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: flex-end;
+  color: var(--color-text-on-dark);
+  background-color: var(--color-primary);
+  background-image: linear-gradient(180deg, rgba(8, 20, 26, 0.4) 0%, rgba(7, 18, 24, 0.48) 40%, rgba(6, 15, 20, 0.78) 100%),
+    var(--hero-image, none);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__content {
+  padding-block: var(--space-6) var(--space-5);
+  max-width: 640px;
+}
+
+.hero .eyebrow {
+  color: var(--color-seafoam);
+}
+
+.hero h1 {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.hero__lead {
+  font-size: var(--fs-lg);
+  color: rgba(245, 247, 245, 0.95);
+  margin-bottom: var(--space-3);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+.hero .eyebrow {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ---------- 8. Karten / Komponenten ---------- */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75em;
+}
+
+.feature-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 1.4em;
+  height: 1.4em;
+  margin-top: 0.15em;
+  border-radius: 50%;
+  background-color: var(--color-seafoam);
+}
+
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 220px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-alt);
+  border: 1px dashed var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  padding: var(--space-2);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery .image-placeholder {
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- 9. Formulare ---------- */
+.form-field {
+  margin-bottom: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.form-field label {
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  font: inherit;
+  padding: 0.8em 1em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-note {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* ---------- 10. Info-/Platzhalter-Boxen ---------- */
+.notice {
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  background-color: #FCF3E3;
+  border: 1px solid var(--color-accent);
+  color: var(--color-text);
+}
+
+.notice strong {
+  color: var(--color-accent-dark);
+}
+
+.calendar-embed {
+  min-height: 480px;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-border);
+  background-color: var(--color-surface-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.price-table th,
+.price-table td {
+  text-align: left;
+  padding: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.price-table th {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+/* ---------- 11. Footer ---------- */
+.site-footer {
+  background-color: var(--color-primary-dark);
+  color: rgba(245, 247, 245, 0.85);
+  padding-block: var(--space-5) var(--space-3);
+}
+
+.site-footer a {
+  color: #fff;
+}
+
+.site-footer a:hover {
+  color: var(--color-seafoam);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 700px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-logo {
+  width: 3.2em;
+  height: 3.2em;
+  margin-bottom: var(--space-2);
+}
+
+.footer-grid h4 {
+  color: #fff;
+  font-size: var(--fs-md);
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5em;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(245, 247, 245, 0.15);
+  padding-top: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: space-between;
+  font-size: var(--fs-sm);
+}
+
+.footer-legal {
+  display: flex;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------- 12. Seiten-Kopf (Unterseiten ohne großes Hero) ---------- */
+.page-header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding-block: var(--space-6) var(--space-5);
+}
+
+.page-header .eyebrow {
+  color: var(--color-seafoam);
+}
+
+.page-header h1 {
+  color: #fff;
+  margin-bottom: var(--space-1);
+}
+
+.page-header p {
+  color: rgba(245, 247, 245, 0.85);
+  max-width: 640px;
+  margin-bottom: 0;
+}
+
+/* ---------- 13. Utilities ---------- */
+.text-center { text-align: center; }
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }

@@ -601,6 +601,7 @@ p {
   background-color: var(--color-primary-dark);
   color: rgba(245, 247, 245, 0.85);
   padding-block: var(--space-5) var(--space-3);
+  line-height: 1.45;
 }
 
 .site-footer a {
@@ -632,7 +633,8 @@ p {
 
 .footer-grid h4 {
   color: #fff;
-  font-size: var(--fs-md);
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-2);
 }
 
 .footer-grid ul {
@@ -640,7 +642,7 @@ p {
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 0.5em;
+  gap: 0.65em;
 }
 
 .footer-bottom {

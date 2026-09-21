@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour appversion="6.1.2" apprev="17873" start="node3">
+  <panorama id="node3">
+    <input leveltilesize="510" levelingroll="4.14" width="1344" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400" levelingpitch="-4.4" height="1344" levelbiashidpi="1.000">
+      <level preload="0" width="1344" height="1344" predecode="0"/>
+      <level preload="0" width="672" height="672" predecode="0"/>
+      <level preload="1" width="336" height="336" predecode="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start pan="0" fov="70" projection="4" tilt="0"/>
+      <flyin pan="0" fov="170" projection="9" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" pan="360" scaletofit="1" fov="120" tilt="90" fovfisheye="360"/>
+    </view>
+    <userdata title="" author="" datetime="14.03.17 12:41" info="" description="" customnodeid="" comment="" latitude="53.770489" source="" longitude="7.699847" tags="wetransfer-febaa3" nodeid="node3" copyright=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" border="1" backgroundalpha="1" width="180" backgroundcolor="0xffffff" textalpha="1" borderalpha="1" borderradius="1" background="1" textcolor="0x000000" wordwrap="1" height="20" bordercolor="0x000000"/>
+      <polystyle mode="0" backgroundalpha="0.25098" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" handcursor="1"/>
+      <hotspot title="" description="" pan="-245.65" url="{node5}" id="Flur" target="" skinid="ht_node" distance="56.0622" tilt="4.91"/>
+      <hotspot title="Küche" description="" pan="-207.72" url="{node4}" id="Küche" target="" skinid="ht_node" distance="186.899" tilt="1.92"/>
+    </hotspots>
+    <media/>
+    <transition enabled="1" softedge="0" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomspeed="2" zoomoutpause="1" blendtime="1" type="crossdissolve" zoomout="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control invertwheel="0" lockedkeyboard="0" lockedwheel="0" rubberband="0" lockedkeyboardzoom="0" simulatemass="1" contextprojections="0" hideabout="0" lockedmouse="0" speedwheel="1" sensitivity="8" dblclickfullscreen="0" invertcontrol="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node4">
+    <input leveltilesize="510" levelingroll="4.14" width="1344" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400" levelingpitch="-4.4" height="1344" levelbiashidpi="1.000">
+      <level preload="0" width="1344" height="1344" predecode="0"/>
+      <level preload="0" width="672" height="672" predecode="0"/>
+      <level preload="1" width="336" height="336" predecode="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start pan="0" fov="70" projection="4" tilt="0"/>
+      <flyin pan="0" fov="170" projection="9" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" pan="360" scaletofit="1" fov="120" tilt="90" fovfisheye="360"/>
+    </view>
+    <userdata title="" author="" datetime="14.03.17 12:40" info="" description="" customnodeid="" comment="" latitude="53.772169" source="" longitude="7.699936" tags="wetransfer-febaa3" nodeid="node4" copyright=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" border="1" backgroundalpha="1" width="180" backgroundcolor="0xffffff" textalpha="1" borderalpha="1" borderradius="1" background="1" textcolor="0x000000" wordwrap="1" height="20" bordercolor="0x000000"/>
+      <polystyle mode="0" backgroundalpha="0.25098" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" handcursor="1"/>
+      <hotspot title="Flur" description="" pan="-248.08" url="{node5}" id="Flur" target="" skinid="ht_node" distance="134.614" tilt="6.04"/>
+      <hotspot title="Wohnen" description="" pan="-35.6" url="{node3}" id="Wohnen" target="" skinid="ht_node" distance="186.899" tilt="2.27"/>
+    </hotspots>
+    <media/>
+    <transition enabled="1" softedge="0" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomspeed="2" zoomoutpause="1" blendtime="1" type="crossdissolve" zoomout="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control invertwheel="0" lockedkeyboard="0" lockedwheel="0" rubberband="0" lockedkeyboardzoom="0" simulatemass="1" contextprojections="0" hideabout="0" lockedmouse="0" speedwheel="1" sensitivity="8" dblclickfullscreen="0" invertcontrol="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node5">
+    <input leveltilesize="510" levelingroll="4.14063" width="1344" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400" levelingpitch="-4.39827" height="1344" levelbiashidpi="1.000">
+      <level preload="0" width="1344" height="1344" predecode="0"/>
+      <level preload="0" width="672" height="672" predecode="0"/>
+      <level preload="1" width="336" height="336" predecode="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start pan="0" fov="70" projection="4" tilt="0"/>
+      <flyin pan="0" fov="170" projection="9" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" pan="360" scaletofit="1" fov="120" tilt="90" fovfisheye="360"/>
+    </view>
+    <userdata title="" author="" datetime="14.03.17 12:40" info="" description="" customnodeid="" comment="" latitude="53.770964" source="" longitude="7.700133" tags="wetransfer-febaa3" nodeid="node5" copyright=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" border="1" backgroundalpha="1" width="180" backgroundcolor="0xffffff" textalpha="1" borderalpha="1" borderradius="1" background="1" textcolor="0x000000" wordwrap="1" height="20" bordercolor="0x000000"/>
+      <polystyle mode="0" backgroundalpha="0.25098" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" handcursor="1"/>
+      <hotspot title="Bad" description="" pan="-195.9" url="{node1}" id="Bad" target="" skinid="ht_node" distance="181.995" tilt="5.52"/>
+      <hotspot title="Schlafen" description="" pan="-258.43" url="{node2}" id="Schlafen" target="" skinid="ht_node" distance="517.091" tilt="3.6"/>
+      <hotspot title="Wohnen" description="" pan="-104.56" url="{node3}" id="Wohnen" target="" skinid="ht_node" distance="56.0622" tilt="-6.19"/>
+    </hotspots>
+    <media/>
+    <transition enabled="1" softedge="0" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomspeed="2" zoomoutpause="1" blendtime="1" type="crossdissolve" zoomout="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control invertwheel="0" lockedkeyboard="0" lockedwheel="0" rubberband="0" lockedkeyboardzoom="0" simulatemass="1" contextprojections="0" hideabout="0" lockedmouse="0" speedwheel="1" sensitivity="8" dblclickfullscreen="0" invertcontrol="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node1">
+    <input leveltilesize="510" levelingroll="4.14" width="1344" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400" levelingpitch="-4.4" height="1344" levelbiashidpi="1.000">
+      <level preload="0" width="1344" height="1344" predecode="0"/>
+      <level preload="0" width="672" height="672" predecode="0"/>
+      <level preload="1" width="336" height="336" predecode="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start pan="0" fov="70" projection="4" tilt="0"/>
+      <flyin pan="0" fov="170" projection="9" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" pan="360" scaletofit="1" fov="120" tilt="90" fovfisheye="360"/>
+    </view>
+    <userdata title="" author="" datetime="14.03.17 12:39" info="" description="" customnodeid="" comment="" latitude="53.769353" source="" longitude="7.699644" tags="wetransfer-febaa3" nodeid="node1" copyright=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" border="1" backgroundalpha="1" width="180" backgroundcolor="0xffffff" textalpha="1" borderalpha="1" borderradius="1" background="1" textcolor="0x000000" wordwrap="1" height="20" bordercolor="0x000000"/>
+      <polystyle mode="0" backgroundalpha="0.25098" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" handcursor="1"/>
+      <hotspot title="Flur" description="" pan="-136.29" url="{node5}" id="Flur" target="" skinid="ht_node" distance="181.995" tilt="0.74"/>
+    </hotspots>
+    <media/>
+    <transition enabled="1" softedge="0" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomspeed="2" zoomoutpause="1" blendtime="1" type="crossdissolve" zoomout="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control invertwheel="0" lockedkeyboard="0" lockedwheel="0" rubberband="0" lockedkeyboardzoom="0" simulatemass="1" contextprojections="0" hideabout="0" lockedmouse="0" speedwheel="1" sensitivity="8" dblclickfullscreen="0" invertcontrol="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node2">
+    <input leveltilesize="510" levelingroll="4.14" width="1344" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" levelbias="0.400" levelingpitch="-4.4" height="1344" levelbiashidpi="1.000">
+      <level preload="0" width="1344" height="1344" predecode="0"/>
+      <level preload="0" width="672" height="672" predecode="0"/>
+      <level preload="1" width="336" height="336" predecode="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start pan="0" fov="70" projection="4" tilt="0"/>
+      <flyin pan="0" fov="170" projection="9" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" pan="360" scaletofit="1" fov="120" tilt="90" fovfisheye="360"/>
+    </view>
+    <userdata title="" author="" datetime="14.03.17 12:39" info="" description="" customnodeid="" comment="" latitude="53.771761" source="" longitude="7.692381" tags="wetransfer-febaa3" nodeid="node2" copyright=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" border="1" backgroundalpha="1" width="180" backgroundcolor="0xffffff" textalpha="1" borderalpha="1" borderradius="1" background="1" textcolor="0x000000" wordwrap="1" height="20" bordercolor="0x000000"/>
+      <polystyle mode="0" backgroundalpha="0.25098" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" handcursor="1"/>
+      <hotspot title="Fliur" description="" pan="-103.34" url="{node5}" id="Flur" target="" skinid="ht_node" distance="517.091" tilt="-1.38"/>
+    </hotspots>
+    <media/>
+    <transition enabled="1" softedge="0" zoomfov="20" zoomin="0" blendcolor="0x000000" zoomspeed="2" zoomoutpause="1" blendtime="1" type="crossdissolve" zoomout="0"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0" animsequence="Animation01"/>
+    <control invertwheel="0" lockedkeyboard="0" lockedwheel="0" rubberband="0" lockedkeyboardzoom="0" simulatemass="1" contextprojections="0" hideabout="0" lockedmouse="0" speedwheel="1" sensitivity="8" dblclickfullscreen="0" invertcontrol="1" contextfullscreen="1"/>
+  </panorama>
+  <masternode>
+    <userdata title="" author="" datetime="" info="" description="" customnodeid="" comment="" latitude="" source="" longitude="" tags="" nodeid="master" copyright=""/>
+  </masternode>
+</tour>

@@ -4,4 +4,4 @@ Disallow: /impressum.html
 Disallow: /datenschutz.html
 Disallow: /3D-Rundgang/
 
-Sitemap: https://buffi51.github.io/inselheimat-spiekeroog/sitemap.xml
+Sitemap: https://inselheimat-spiekeroog.de/sitemap.xml

@@ -123,14 +123,51 @@ function initContactForm() {
   const form = document.querySelector("#contact-form");
   if (!form) return;
 
-  form.addEventListener("submit", (event) => {
+  const status = form.querySelector(".form-status");
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const status = form.querySelector(".form-status");
-    // Platzhalter: Hier später echten Versand (z. B. per Mail-API oder Formspree) einbinden.
+
     if (status) {
-      status.textContent = "Vielen Dank für Ihre Nachricht! Wir melden uns schnellstmöglich bei Ihnen.";
-      status.hidden = false;
+      status.hidden = true;
+      status.style.color = "";
     }
-    form.reset();
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Wird gesendet …";
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
+      const result = await response.json();
+
+      if (status) {
+        if (response.ok && result.success) {
+          status.textContent = "Vielen Dank für Ihre Nachricht! Wir melden uns schnellstmöglich bei Ihnen.";
+          status.style.color = "var(--color-success)";
+          form.reset();
+        } else {
+          status.textContent = "Leider ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail.";
+          status.style.color = "var(--color-error)";
+        }
+        status.hidden = false;
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent = "Leider ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail.";
+        status.style.color = "var(--color-error)";
+        status.hidden = false;
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Anfrage senden";
+      }
+    }
   });
 }
